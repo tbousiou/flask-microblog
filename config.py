@@ -14,4 +14,5 @@ class Config(object):
     MAIL_PASSWORD = 'a802660defa5a0'
     ADMINS = ['tbousiou@gmail.com']
 
+    LANGUAGES = ['en', 'el', 'es']
     POSTS_PER_PAGE = 4

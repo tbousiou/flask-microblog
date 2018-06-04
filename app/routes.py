@@ -6,7 +6,7 @@ from app.models import User, Post
 from app import app, db
 from app.forms import LoginForm, RegistrationForm, EditProfileForm, ResetPasswordRequestForm, ResetPasswordForm, PostForm
 from app.email import send_password_reset_email
-
+from flask_babel import _
 
 @app.before_request
 def before_request():
@@ -24,7 +24,7 @@ def index():
         post = Post(body=form.post.data, author=current_user)
         db.session.add(post)
         db.session.commit()
-        flash('Your post is now live!')
+        flash(_('Your post is now live!'))
         return redirect(url_for('index'))
     
     page = request.args.get('page', 1, type=int)

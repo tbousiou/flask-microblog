@@ -2,3 +2,4 @@ venv/
 logs/
 app.db
 **/__pycache__
+messages.pot
